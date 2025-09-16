@@ -1,10 +1,26 @@
+/* CSS Reset for consistent sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  /* overflow-x: hidden; Prevents horizontal scrolling */
+}
+
+/* Ensure the root element fills the screen */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
   text-align: center;
 }
 
+/* Other styles from your original App.css */
 .logo {
   height: 6em;
   padding: 1.5em;
