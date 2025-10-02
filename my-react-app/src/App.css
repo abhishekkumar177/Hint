@@ -8,12 +8,11 @@
 html, body {
   height: 100%;
   width: 100%;
-  /* overflow-x: hidden; Prevents horizontal scrolling */
 }
 
 /* Ensure the root element fills the screen */
 #root {
-  width: 100%;
+  width: 100vw;
   min-height: 100%;
   padding: 0;
   margin: 0;

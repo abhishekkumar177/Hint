@@ -15,7 +15,7 @@ const Portfolio = () => {
           <h1 className="tagline">Hey Student! Glad you swung by.</h1>
           <p className="subline">Here’s how my portfolio can inspire your learning journey.</p>
           <div className="hero-video">
-            <video src=".Hero.mp4" autoPlay loop muted></video>
+            <video src="" autoPlay loop muted></video>
           </div>
         </div>
       </section>
@@ -184,13 +184,13 @@ export default function App() {
   return (
     <>
       {/* Background video layer */}
-      {/* <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', overflow: 'hidden', zIndex: -1 }}>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', overflow: 'hidden', zIndex: -1 }}>
         <video autoPlay muted loop style={{ minWidth: '100%', minHeight: '100%', width: 'auto', height: 'auto', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-          <source src="./src/vid/Background.mp4" type="video/mp4" />
+          <source src="./src/Background.mp4" type="video/mp4" />
         </video>
-      </div> */}
+      </div>
 
-      {/* Main ntent layer */}
+      {/* Main portfolio content layer */}
       <div id="portfolio-container" style={{ position: 'relative', zIndex: 1, backgroundColor: 'rgba(6, 0, 16, 0.7)' }}>
         <Portfolio />
       </div>

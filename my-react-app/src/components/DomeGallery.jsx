@@ -2,18 +2,17 @@ import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
 import './DomeGallery.css';
 
-import art1 from './../img/1.jpg';
 const DEFAULT_IMAGES = [
   {
-    src: './../assets/art1.jpg',
+    src: 'https://images.unsplash.com/photo-1755331039789-7e5680e26e8f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     alt: 'Abstract art'
   },
   {
-    src: './../assets/art2.jpg',
+    src: 'https://images.unsplash.com/photo-1755569309049-98410b94f66d?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     alt: 'Modern sculpture'
   },
   {
-    src: art1,
+    src: 'https://images.unsplash.com/photo-1755497595318-7e5e3523854f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     alt: 'Digital artwork'
   },
   {
@@ -123,7 +122,7 @@ export default function DomeGallery({
   openedImageHeight = '350px',
   imageBorderRadius = '30px',
   openedImageBorderRadius = '30px',
-  grayscale = false
+  grayscale = true
 }) {
   const rootRef = useRef(null);
   const mainRef = useRef(null);
@@ -469,7 +468,7 @@ export default function DomeGallery({
       parent.style.setProperty('--rot-y-delta', `${rotY}deg`);
       parent.style.setProperty('--rot-x-delta', `${rotX}deg`);
       const refDiv = document.createElement('div');
-      refDiv.className = 'item__image--reference';
+      refDiv.className = 'item__image item__image--reference';
       refDiv.style.opacity = '0';
       refDiv.style.transform = `rotateX(${-parentRot.rotateX}deg) rotateY(${-parentRot.rotateY}deg)`;
       parent.appendChild(refDiv);
